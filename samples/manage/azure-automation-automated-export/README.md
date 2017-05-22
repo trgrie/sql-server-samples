@@ -43,8 +43,8 @@ Save the AutoExport.ps1 and AutoExportBlobRetention.ps1 files locally to make th
 	- **$serverCredentialsDictionary:** If you are backing up from multiple servers, you can setup all of the credentials here and look them up by the server’s name later.
 	Add an entry to the $serverCredentialsDictionary variable in the format `'SAMPLESERVER1' = 'NAMEOFSERVERCREDENTIAL1'` for each Azure Automation Credential you created.
 	- **$batchingLimit:** This tells the script how many databases can be worked on at the same time (basically, the maximum number of database copies that there will be at once).
-	- **RetryLimit:** This tells the script how many times it can retry an operation.
-	- **WaitTimeInMinutes:** This tells the script how long it can wait for an operation to complete before it fails.
+	- **RetryLimit:** This tells the script how many times it can retry an operation. This variable is in $constants.
+	- **WaitTimeInMinutes:** This tells the script how long it can wait for an operation to complete before it fails. This variable is in $constants.
 	- **$storageKeyVariableName:** This is the Azure Automation string Variable name you created to store your Storage Key.
 	- **$storageAccountName:** This is the name of the storage account you are exporting to.
 	- **$connectionAssetName:** Connection Asset Name for Authenticating (Keep as AzureClassicRunAsConnection if you created the default RunAs accounts) 
